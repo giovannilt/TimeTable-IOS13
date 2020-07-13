@@ -3,18 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E2014C259447C2F6D01D9C /* Pods_TimerSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D0A0E50DAAFB64ADA0318B /* Pods_TimerSheet.framework */; };
 		DE734A3424BC9EC9004F3205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A3324BC9EC9004F3205 /* AppDelegate.swift */; };
 		DE734A3624BC9EC9004F3205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A3524BC9EC9004F3205 /* SceneDelegate.swift */; };
-		DE734A3824BC9EC9004F3205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A3724BC9EC9004F3205 /* ViewController.swift */; };
+		DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A3724BC9EC9004F3205 /* WellcomeViewController.swift */; };
 		DE734A3B24BC9EC9004F3205 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE734A3924BC9EC9004F3205 /* Main.storyboard */; };
 		DE734A3D24BC9ECA004F3205 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE734A3C24BC9ECA004F3205 /* Assets.xcassets */; };
 		DE734A4024BC9ECA004F3205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE734A3E24BC9ECA004F3205 /* LaunchScreen.storyboard */; };
 		DE734A4B24BC9ECB004F3205 /* TimerSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A4A24BC9ECB004F3205 /* TimerSheetTests.swift */; };
 		DE734A5624BC9ECB004F3205 /* TimerSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A5524BC9ECB004F3205 /* TimerSheetUITests.swift */; };
+		DE734A6724BCA927004F3205 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6624BCA927004F3205 /* Contants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99D0A0E50DAAFB64ADA0318B /* Pods_TimerSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43295BB91F94E1C02738A14 /* Pods-TimerSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		DE734A3024BC9EC9004F3205 /* TimerSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE734A3324BC9EC9004F3205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE734A3524BC9EC9004F3205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE734A3724BC9EC9004F3205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE734A3724BC9EC9004F3205 /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		DE734A3A24BC9EC9004F3205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE734A3C24BC9ECA004F3205 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE734A3F24BC9ECA004F3205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		DE734A5124BC9ECB004F3205 /* TimerSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerSheetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE734A5524BC9ECB004F3205 /* TimerSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSheetUITests.swift; sourceTree = "<group>"; };
 		DE734A5724BC9ECB004F3205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE734A6624BCA927004F3205 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.release.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E2014C259447C2F6D01D9C /* Pods_TimerSheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		482470247E4632153D7C6FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99D0A0E50DAAFB64ADA0318B /* Pods_TimerSheet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE734A2724BC9EC9004F3205 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,8 @@
 				DE734A4924BC9ECB004F3205 /* TimerSheetTests */,
 				DE734A5424BC9ECB004F3205 /* TimerSheetUITests */,
 				DE734A3124BC9EC9004F3205 /* Products */,
+				F37407B470770AC5C57F632A /* Pods */,
+				482470247E4632153D7C6FFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +118,12 @@
 			children = (
 				DE734A3324BC9EC9004F3205 /* AppDelegate.swift */,
 				DE734A3524BC9EC9004F3205 /* SceneDelegate.swift */,
-				DE734A3724BC9EC9004F3205 /* ViewController.swift */,
-				DE734A3924BC9EC9004F3205 /* Main.storyboard */,
+				DE734A6524BC9EF9004F3205 /* Model */,
+				DE734A6324BC9EE1004F3205 /* View */,
+				DE734A6424BC9EEC004F3205 /* Controller */,
 				DE734A3C24BC9ECA004F3205 /* Assets.xcassets */,
-				DE734A3E24BC9ECA004F3205 /* LaunchScreen.storyboard */,
 				DE734A4124BC9ECA004F3205 /* Info.plist */,
+				DE734A6624BCA927004F3205 /* Contants.swift */,
 			);
 			path = TimerSheet;
 			sourceTree = "<group>";
@@ -128,6 +146,39 @@
 			path = TimerSheetUITests;
 			sourceTree = "<group>";
 		};
+		DE734A6324BC9EE1004F3205 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE734A3E24BC9ECA004F3205 /* LaunchScreen.storyboard */,
+				DE734A3924BC9EC9004F3205 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE734A6424BC9EEC004F3205 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE734A3724BC9EC9004F3205 /* WellcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE734A6524BC9EF9004F3205 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F37407B470770AC5C57F632A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A43295BB91F94E1C02738A14 /* Pods-TimerSheet.debug.xcconfig */,
+				F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE734A5A24BC9ECB004F3205 /* Build configuration list for PBXNativeTarget "TimerSheet" */;
 			buildPhases = (
+				402D1265F51E555CAB950319 /* [CP] Check Pods Manifest.lock */,
 				DE734A2C24BC9EC9004F3205 /* Sources */,
 				DE734A2D24BC9EC9004F3205 /* Frameworks */,
 				DE734A2E24BC9EC9004F3205 /* Resources */,
+				5A8BF6C2F2EAC356EEE3EBFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +307,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		402D1265F51E555CAB950319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimerSheet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A8BF6C2F2EAC356EEE3EBFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimerSheet/Pods-TimerSheet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimerSheet/Pods-TimerSheet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimerSheet/Pods-TimerSheet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE734A2C24BC9EC9004F3205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE734A3824BC9EC9004F3205 /* ViewController.swift in Sources */,
+				DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */,
 				DE734A3424BC9EC9004F3205 /* AppDelegate.swift in Sources */,
 				DE734A3624BC9EC9004F3205 /* SceneDelegate.swift in Sources */,
+				DE734A6724BCA927004F3205 /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +528,7 @@
 		};
 		DE734A5B24BC9ECB004F3205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A43295BB91F94E1C02738A14 /* Pods-TimerSheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +546,7 @@
 		};
 		DE734A5C24BC9ECB004F3205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

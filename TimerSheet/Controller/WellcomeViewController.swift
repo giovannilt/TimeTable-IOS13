@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CLTypingLabel
 
-class ViewController: UIViewController {
+class WellcomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: CLTypingLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        titleLabel.text = K.appName
     }
 
 
