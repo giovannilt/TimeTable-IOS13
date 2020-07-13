@@ -17,6 +17,9 @@
 		DE734A4B24BC9ECB004F3205 /* TimerSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A4A24BC9ECB004F3205 /* TimerSheetTests.swift */; };
 		DE734A5624BC9ECB004F3205 /* TimerSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A5524BC9ECB004F3205 /* TimerSheetUITests.swift */; };
 		DE734A6724BCA927004F3205 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6624BCA927004F3205 /* Contants.swift */; };
+		DE734A6924BCB968004F3205 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6824BCB968004F3205 /* RegisterViewController.swift */; };
+		DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6A24BCBE47004F3205 /* LoginViewController.swift */; };
+		DE734A6D24BCC2D9004F3205 /* ClockIn_OutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		DE734A5524BC9ECB004F3205 /* TimerSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSheetUITests.swift; sourceTree = "<group>"; };
 		DE734A5724BC9ECB004F3205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE734A6624BCA927004F3205 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		DE734A6824BCB968004F3205 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DE734A6A24BCBE47004F3205 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockIn_OutController.swift; sourceTree = "<group>"; };
 		F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.release.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 		DE734A3224BC9EC9004F3205 /* TimerSheet */ = {
 			isa = PBXGroup;
 			children = (
+				DE734A6624BCA927004F3205 /* Contants.swift */,
 				DE734A3324BC9EC9004F3205 /* AppDelegate.swift */,
 				DE734A3524BC9EC9004F3205 /* SceneDelegate.swift */,
 				DE734A6524BC9EF9004F3205 /* Model */,
@@ -123,7 +130,6 @@
 				DE734A6424BC9EEC004F3205 /* Controller */,
 				DE734A3C24BC9ECA004F3205 /* Assets.xcassets */,
 				DE734A4124BC9ECA004F3205 /* Info.plist */,
-				DE734A6624BCA927004F3205 /* Contants.swift */,
 			);
 			path = TimerSheet;
 			sourceTree = "<group>";
@@ -159,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				DE734A3724BC9EC9004F3205 /* WellcomeViewController.swift */,
+				DE734A6824BCB968004F3205 /* RegisterViewController.swift */,
+				DE734A6A24BCBE47004F3205 /* LoginViewController.swift */,
+				DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,9 +363,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */,
 				DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */,
+				DE734A6924BCB968004F3205 /* RegisterViewController.swift in Sources */,
 				DE734A3424BC9EC9004F3205 /* AppDelegate.swift in Sources */,
 				DE734A3624BC9EC9004F3205 /* SceneDelegate.swift in Sources */,
+				DE734A6D24BCC2D9004F3205 /* ClockIn_OutController.swift in Sources */,
 				DE734A6724BCA927004F3205 /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
