@@ -9,6 +9,7 @@ target 'TimerSheet' do
   pod 'CLTypingLabel', '~> 0.4.0'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
   pod 'IQKeyboardManagerSwift'
 
 end

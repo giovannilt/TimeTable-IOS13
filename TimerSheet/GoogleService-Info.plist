@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>853292273204-gpj67mimn3iksk66p66p1vg750efa302.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.853292273204-gpj67mimn3iksk66p66p1vg750efa302</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBaC7JcUd1CDfCokHrSVD58ZQIiuSH9edM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>853292273204</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.theAvengers.dottorStrange.TimerSheet</string>
+	<key>PROJECT_ID</key>
+	<string>timesheet-2c76d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>timesheet-2c76d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:853292273204:ios:fb4b85d3bb7940dcc70461</string>
+	<key>DATABASE_URL</key>
+	<string>https://timesheet-2c76d.firebaseio.com</string>
+</dict>
+</plist>

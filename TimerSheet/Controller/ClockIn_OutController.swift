@@ -12,24 +12,28 @@ import FirebaseFirestore
 
 class ClockIn_OutController: UIViewController{
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var messageTextfield: UITextField!
-    
     let db = Firestore.firestore()
-    
-  
+      
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
+
+}
+
+//Mark: - NavigationBar
+
+extension ClockIn_OutController{
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
+           do {
+               try Auth.auth().signOut()
+               navigationController?.popToRootViewController(animated: true)
+           } catch let signOutError as NSError {
+             print ("Error signing out: %@", signOutError)
+           }
     }
+    
 }
 
 

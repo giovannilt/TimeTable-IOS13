@@ -20,6 +20,8 @@
 		DE734A6924BCB968004F3205 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6824BCB968004F3205 /* RegisterViewController.swift */; };
 		DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6A24BCBE47004F3205 /* LoginViewController.swift */; };
 		DE734A6D24BCC2D9004F3205 /* ClockIn_OutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */; };
+		DE734A6F24BD8D05004F3205 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE734A6E24BD8D05004F3205 /* GoogleService-Info.plist */; };
+		DE734A7124BD9D7C004F3205 /* WorkingDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7024BD9D7C004F3205 /* WorkingDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		DE734A6824BCB968004F3205 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DE734A6A24BCBE47004F3205 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockIn_OutController.swift; sourceTree = "<group>"; };
+		DE734A6E24BD8D05004F3205 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE734A7024BD9D7C004F3205 /* WorkingDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDay.swift; sourceTree = "<group>"; };
 		F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.release.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,7 @@
 				DE734A6424BC9EEC004F3205 /* Controller */,
 				DE734A3C24BC9ECA004F3205 /* Assets.xcassets */,
 				DE734A4124BC9ECA004F3205 /* Info.plist */,
+				DE734A6E24BD8D05004F3205 /* GoogleService-Info.plist */,
 			);
 			path = TimerSheet;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		DE734A6524BC9EF9004F3205 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE734A7024BD9D7C004F3205 /* WorkingDay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE734A4024BC9ECA004F3205 /* LaunchScreen.storyboard in Resources */,
+				DE734A6F24BD8D05004F3205 /* GoogleService-Info.plist in Resources */,
 				DE734A3D24BC9ECA004F3205 /* Assets.xcassets in Resources */,
 				DE734A3B24BC9EC9004F3205 /* Main.storyboard in Resources */,
 			);
@@ -365,6 +372,7 @@
 			files = (
 				DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */,
 				DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */,
+				DE734A7124BD9D7C004F3205 /* WorkingDay.swift in Sources */,
 				DE734A6924BCB968004F3205 /* RegisterViewController.swift in Sources */,
 				DE734A3424BC9EC9004F3205 /* AppDelegate.swift in Sources */,
 				DE734A3624BC9EC9004F3205 /* SceneDelegate.swift in Sources */,
