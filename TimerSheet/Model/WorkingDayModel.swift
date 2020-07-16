@@ -10,12 +10,12 @@ import Foundation
 
 struct WorkingDayModel{
     var hasClockedInWorkingDay: Bool
-    var clockInWorkginDay: Double
-    var clockOutWorkingDay: Double
+    var clockInWorkginDay: Date?
+    var clockOutWorkingDay: Date?
    
     var hasClockedInBreak: Bool
-    var clockInBreak: Double
-    var clockOutBreak: Double
+    var clockInBreak: Date?
+    var clockOutBreak: Date?
 
     func clockWorkingDayInOutStatus() -> String{
         if hasClockedInWorkingDay{
@@ -32,20 +32,25 @@ struct WorkingDayModel{
         }
     }
     func clockInWorkginDayFormatted() -> String{
-        let date = Date(timeIntervalSince1970: clockInWorkginDay)
-        return date.getFormattedDate(format: "dd-MM-yyyy HH:mm:ss") // Set output formate
+        return format(date: clockInWorkginDay)
     }
     func clockOutWorkginDayFormatted() -> String{
-        let date = Date(timeIntervalSince1970: clockOutWorkingDay)
-        return date.getFormattedDate(format: "dd-MM-yyyy HH:mm:ss") // Set output formate
+        return format(date: clockOutWorkingDay)
     }
     func clockInBreakFormatted() -> String{
-          let date = Date(timeIntervalSince1970: clockInBreak)
-          return date.getFormattedDate(format: "dd-MM-yyyy HH:mm:ss") // Set output formate
+         return format(date: clockInBreak)
     }
     func clockOutBreakFormatted() -> String{
-        let date = Date(timeIntervalSince1970: clockOutBreak)
-        return date.getFormattedDate(format: "dd-MM-yyyy HH:mm:ss") // Set output formate
+        return format(date: clockOutBreak)
+    }
+    
+    func format(date: Date?) -> String{
+        if let d = date {
+            return d.getFormattedDate(format: "dd-MM-yyyy HH:mm:ss") // Set output formate
+        }else{
+            return "-"
+        }
+        
     }
 }
 

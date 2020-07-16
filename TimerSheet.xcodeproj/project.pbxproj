@@ -130,15 +130,15 @@
 		DE734A3224BC9EC9004F3205 /* TimerSheet */ = {
 			isa = PBXGroup;
 			children = (
-				DE734A6624BCA927004F3205 /* Contants.swift */,
 				DE734A3324BC9EC9004F3205 /* AppDelegate.swift */,
 				DE734A3524BC9EC9004F3205 /* SceneDelegate.swift */,
 				DE734A6524BC9EF9004F3205 /* Model */,
 				DE734A6324BC9EE1004F3205 /* View */,
 				DE734A6424BC9EEC004F3205 /* Controller */,
 				DE734A3C24BC9ECA004F3205 /* Assets.xcassets */,
-				DE734A4124BC9ECA004F3205 /* Info.plist */,
+				DE734A6624BCA927004F3205 /* Contants.swift */,
 				DE734A6E24BD8D05004F3205 /* GoogleService-Info.plist */,
+				DE734A4124BC9ECA004F3205 /* Info.plist */,
 			);
 			path = TimerSheet;
 			sourceTree = "<group>";
