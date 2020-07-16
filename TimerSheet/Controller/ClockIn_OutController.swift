@@ -27,14 +27,10 @@ class ClockIn_OutController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        self.updateClockInOutView()
+        updateClockInOutView()
         retiveDailyClockInTimeStamp()
         retiveBreakClockInTimeStamp()
-        
     }
-    
-    
-    
 }
 
 extension ClockIn_OutController {
@@ -154,7 +150,7 @@ extension ClockIn_OutController{
             ).whereField(K.FSStore.TimeStamp, isLessThan: date.endOfDay
             ).whereField(K.FSStore.UserID, isEqualTo: userUID
             ).whereField(K.FSStore.Subject, isEqualTo: "\(StampingSubject.ClockIn)"
-            ).order(by: K.FSStore.TimeStamp)
+            ).order(by: K.FSStore.TimeStamp, descending: false)
             
             collection.getDocuments() { (querySnapshot, error) in
                 if let e = error {
@@ -173,6 +169,31 @@ extension ClockIn_OutController{
                     }
                 }
             }
+            
+            let collectionOut = db.collection(K.FSStore.TimeStampCollectionName
+            ).whereField(K.FSStore.TimeStamp, isGreaterThanOrEqualTo: date.startOfDay
+            ).whereField(K.FSStore.TimeStamp, isLessThan: date.endOfDay
+            ).whereField(K.FSStore.UserID, isEqualTo: userUID
+            ).whereField(K.FSStore.Subject, isEqualTo: "\(StampingSubject.ClockOut)"
+            ).order(by: K.FSStore.TimeStamp, descending: true)
+            
+            collectionOut.getDocuments() { (querySnapshot, error) in
+                if let e = error {
+                    print("There was a issue retrieving data from Firestore: \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents, snapshotDocuments.count > 0{
+                        let data = snapshotDocuments[0].data()
+                        if let timeStamping = data[K.FSStore.TimeStamp] {
+                            print(timeStamping)
+                            self.workingDayModel.clockOutWorkingDay =  (timeStamping as! Timestamp).dateValue()
+                        }
+                        DispatchQueue.main.async {
+                            self.updateClockInOutView()
+                        }
+                    }
+                }
+            }
+            
         }
     }
     
@@ -184,7 +205,7 @@ extension ClockIn_OutController{
             ).whereField(K.FSStore.TimeStamp, isLessThan: date.endOfDay
             ).whereField(K.FSStore.UserID, isEqualTo: userUID
             ).whereField(K.FSStore.Subject, isEqualTo: "\(StampingSubject.LunchBreakClockIn)"
-            ).order(by: K.FSStore.TimeStamp)
+            ).order(by: K.FSStore.TimeStamp, descending: false)
             
             collection.getDocuments() { (querySnapshot, error) in
                 if let e = error {
@@ -203,6 +224,30 @@ extension ClockIn_OutController{
                     }
                 }
             }
+            let collectionOut = db.collection(K.FSStore.TimeStampCollectionName
+            ).whereField(K.FSStore.TimeStamp, isGreaterThanOrEqualTo: date.startOfDay
+            ).whereField(K.FSStore.TimeStamp, isLessThan: date.endOfDay
+            ).whereField(K.FSStore.UserID, isEqualTo: userUID
+            ).whereField(K.FSStore.Subject, isEqualTo: "\(StampingSubject.LunchBreakClockOut)"
+            ).order(by: K.FSStore.TimeStamp, descending: true)
+            
+            collectionOut.getDocuments() { (querySnapshot, error) in
+                if let e = error {
+                    print("There was a issue retrieving data from Firestore: \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents, snapshotDocuments.count > 0{
+                        let data = snapshotDocuments[0].data()
+                        if let timeStamping = data[K.FSStore.TimeStamp] {
+                            print(timeStamping)
+                            self.workingDayModel.clockOutBreak = (timeStamping as! Timestamp).dateValue()
+                        }
+                        DispatchQueue.main.async {
+                            self.updateClockInOutView()
+                        }
+                    }
+                }
+            }
+            
         }
     }
     
