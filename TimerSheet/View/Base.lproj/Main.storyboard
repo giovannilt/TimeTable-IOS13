@@ -303,11 +303,17 @@
                                 <rect key="frame" x="55" y="184" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ClockIn_ClockOut"/>
+                                <connections>
+                                    <action selector="clockWorkingDayButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="fQV-KJ-B2K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-R8-qmT">
                                 <rect key="frame" x="55" y="288" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ClockIn_ClockOut"/>
+                                <connections>
+                                    <action selector="clockBreakButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="Drp-07-fVt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-iT-jeG">
                                 <rect key="frame" x="321" y="293" width="42" height="21"/>
@@ -342,6 +348,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="clockBreakButton" destination="MJ2-R8-qmT" id="SNg-FY-Hfd"/>
+                        <outlet property="clockInBreakLabel" destination="4Ev-qa-ld3" id="Kvf-Gr-szn"/>
+                        <outlet property="clockInWorkginDayLabel" destination="l8h-wd-6wP" id="V2C-fu-Dh0"/>
+                        <outlet property="clockOutBreakLabel" destination="eeP-iT-jeG" id="MKw-gM-OD5"/>
+                        <outlet property="clockOutWorkingDayLabel" destination="5dC-ms-c2L" id="j57-jk-vMX"/>
+                        <outlet property="clockWorkingDayButton" destination="5pA-TZ-5U4" id="ThC-PH-71c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocA-hB-qRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,7 +420,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T3M-hW-1yC"/>
+        <segue reference="nVI-TZ-lxh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WellcomIcon" width="768" height="768"/>
