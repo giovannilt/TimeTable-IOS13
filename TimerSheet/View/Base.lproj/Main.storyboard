@@ -344,9 +344,6 @@
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pA-TZ-5U4">
                                         <rect key="frame" x="0.0" y="180" width="394" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dqX-do-ajs"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="ClockIn_ClockOut">
                                             <color key="titleColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -357,10 +354,7 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -369,16 +363,15 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sEV-Mg-HZL" firstAttribute="top" secondItem="fSA-fx-G83" secondAttribute="bottom" constant="10" id="C8r-DG-t7m"/>
+                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="6N8-d1-9Rv"/>
                                     <constraint firstItem="sEV-Mg-HZL" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="FTk-Er-9Tb"/>
-                                    <constraint firstItem="SUj-3a-wtq" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="bottom" id="I1d-MZ-iIs"/>
                                     <constraint firstAttribute="trailing" secondItem="sEV-Mg-HZL" secondAttribute="trailing" id="J8V-tv-vug"/>
                                     <constraint firstItem="SUj-3a-wtq" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="L6P-7B-7O2"/>
                                     <constraint firstItem="fSA-fx-G83" firstAttribute="top" secondItem="AU5-sR-T0T" secondAttribute="top" id="NKY-pJ-q7a"/>
                                     <constraint firstItem="5pA-TZ-5U4" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="OzU-wS-Ibn"/>
                                     <constraint firstAttribute="trailing" secondItem="SUj-3a-wtq" secondAttribute="trailing" id="TY9-Nz-d9i"/>
+                                    <constraint firstAttribute="trailing" secondItem="5pA-TZ-5U4" secondAttribute="trailing" id="XQJ-ZS-kaa"/>
                                     <constraint firstAttribute="trailing" secondItem="5pA-TZ-5U4" secondAttribute="trailing" constant="10" id="awm-Tg-ybG"/>
-                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="bottom" constant="10" id="cUY-wR-4Xs"/>
                                     <constraint firstAttribute="trailing" secondItem="fSA-fx-G83" secondAttribute="trailing" id="gYR-NY-jhq"/>
                                     <constraint firstItem="fSA-fx-G83" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="hcA-4W-ZaI"/>
                                 </constraints>
@@ -447,7 +440,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-R8-qmT">
-                                        <rect key="frame" x="10" y="180" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="ClockIn_ClockOut"/>
@@ -456,10 +449,7 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -468,13 +458,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" constant="10" id="9IB-lc-qBq"/>
-                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="bottom" constant="10" id="Dg8-So-xhR"/>
                                     <constraint firstAttribute="trailing" secondItem="LK3-N9-TaH" secondAttribute="trailing" id="JKs-vT-yD0"/>
-                                    <constraint firstItem="7nh-42-ol1" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="bottom" id="LI8-Cp-ccx"/>
-                                    <constraint firstItem="LK3-N9-TaH" firstAttribute="top" secondItem="9cB-xe-ULs" secondAttribute="bottom" constant="10" id="LnL-UK-FJO"/>
+                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="N1r-KY-vsx"/>
+                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="X76-ev-vwQ"/>
                                     <constraint firstItem="LK3-N9-TaH" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="aKz-13-Lid"/>
                                     <constraint firstItem="7nh-42-ol1" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="cKO-0O-0sY"/>
+                                    <constraint firstAttribute="trailing" secondItem="MJ2-R8-qmT" secondAttribute="trailing" id="cQz-Yi-3kh"/>
                                     <constraint firstItem="9cB-xe-ULs" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="dtq-Oo-1PT"/>
                                     <constraint firstAttribute="trailing" secondItem="9cB-xe-ULs" secondAttribute="trailing" id="j7A-eC-V6Q"/>
                                     <constraint firstAttribute="trailing" secondItem="MJ2-R8-qmT" secondAttribute="trailing" constant="10" id="odh-7G-KTi"/>
