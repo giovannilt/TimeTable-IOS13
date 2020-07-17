@@ -250,7 +250,5 @@ extension ClockIn_OutController{
             
         }
     }
-    
-    
 }
 
