@@ -24,6 +24,7 @@
 		DE734A7124BD9D7C004F3205 /* Stamping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7024BD9D7C004F3205 /* Stamping.swift */; };
 		DE734A7324BF146D004F3205 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7224BF146D004F3205 /* Utils.swift */; };
 		DE734A7524BF271F004F3205 /* WorkingDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7424BF271F004F3205 /* WorkingDayModel.swift */; };
+		DECBF82D24C18B66004DF8BF /* WorkingDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBF82C24C18B66004DF8BF /* WorkingDayManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		DE734A7024BD9D7C004F3205 /* Stamping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamping.swift; sourceTree = "<group>"; };
 		DE734A7224BF146D004F3205 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DE734A7424BF271F004F3205 /* WorkingDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayModel.swift; sourceTree = "<group>"; };
+		DECBF82C24C18B66004DF8BF /* WorkingDayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayManager.swift; sourceTree = "<group>"; };
 		F383ACBDA77BE8B61049543E /* Pods-TimerSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.release.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				DE734A7024BD9D7C004F3205 /* Stamping.swift */,
 				DE734A7224BF146D004F3205 /* Utils.swift */,
 				DE734A7424BF271F004F3205 /* WorkingDayModel.swift */,
+				DECBF82C24C18B66004DF8BF /* WorkingDayManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DECBF82D24C18B66004DF8BF /* WorkingDayManager.swift in Sources */,
 				DE734A7524BF271F004F3205 /* WorkingDayModel.swift in Sources */,
 				DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */,
 				DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */,

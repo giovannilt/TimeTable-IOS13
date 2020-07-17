@@ -13,19 +13,19 @@ extension Date {
     var startOfDay: Date {
         return Calendar.current.startOfDay(for: self)
     }
-
+    
     var endOfDay: Date {
         var components = DateComponents()
         components.day = 1
         components.second = -1
         return Calendar.current.date(byAdding: components, to: startOfDay)!
     }
-
+    
     var startOfMonth: Date {
         let components = Calendar.current.dateComponents([.year, .month], from: startOfDay)
         return Calendar.current.date(from: components)!
     }
-
+    
     var endOfMonth: Date {
         var components = DateComponents()
         components.month = 1
@@ -38,10 +38,16 @@ extension Date {
         dateformat.dateFormat = format
         return dateformat.string(from: self)
     }
+    func formatHour() -> String{
+        return self.getFormattedDate(format: "HH:mm:ss") // Set output formate
+    }
+    func formatToday() -> String{
+        return self.getFormattedDate(format: "dd-MM-yyyy") // Set output formate
+    }
     
 }
 @IBDesignable extension UIButton {
-
+    
     @IBInspectable var borderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
@@ -50,7 +56,7 @@ extension Date {
             return layer.borderWidth
         }
     }
-
+    
     @IBInspectable var cornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
@@ -59,7 +65,7 @@ extension Date {
             return layer.cornerRadius
         }
     }
-
+    
     @IBInspectable var borderColor: UIColor? {
         set {
             guard let uiColor = newValue else { return }

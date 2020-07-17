@@ -278,208 +278,232 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-sR-T0T" userLabel="WorkSetView">
-                                <rect key="frame" x="10" y="98" width="394" height="230"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dnb-UX-fNw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="376"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-fx-G83">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-cB-Byq">
+                                        <rect key="frame" x="177.5" y="0.0" width="59.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEV-Mg-HZL" userLabel="ClockInView">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-sR-T0T" userLabel="WorkSetView">
+                                        <rect key="frame" x="0.0" y="30" width="414" height="176"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8h-wd-6wP">
-                                                <rect key="frame" x="109" y="10" width="59.5" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-fx-G83">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ClockIn: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn4-jH-AGi">
-                                                <rect key="frame" x="10" y="10" width="94" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEV-Mg-HZL" userLabel="ClockInView">
+                                                <rect key="frame" x="0.0" y="62" width="414" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pA-TZ-5U4">
+                                                        <rect key="frame" x="5" y="0.0" width="130" height="52"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="130" id="R7g-bp-sVg"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="ClockIn">
+                                                            <color key="titleColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleShadowColor" red="0.90588235289999997" green="0.87450980389999999" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clockButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="jVp-Fj-JtI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8h-wd-6wP">
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="top" id="BVp-5X-ntR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5pA-TZ-5U4" secondAttribute="bottom" id="EyC-i8-b8g"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l8h-wd-6wP" secondAttribute="trailing" constant="5" id="JId-Qb-UzA"/>
+                                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="top" id="bo9-gf-mvA"/>
+                                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="leading" secondItem="sEV-Mg-HZL" secondAttribute="leading" constant="5" id="gqk-C0-9KA"/>
+                                                    <constraint firstItem="l8h-wd-6wP" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="top" constant="10" id="rW4-Nm-Qse"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-3a-wtq" userLabel="ClockOut">
+                                                <rect key="frame" x="0.0" y="124" width="414" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-K4-ZGM">
+                                                        <rect key="frame" x="5" y="0.0" width="130" height="52"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="130" id="4Sz-q0-LVf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="ClockOut">
+                                                            <color key="titleColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleShadowColor" red="0.90588235289999997" green="0.87450980389999999" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clockButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="Ud1-Me-84Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-ms-c2L">
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="5dC-ms-c2L" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="top" constant="10" id="6ND-X7-NR0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5dC-ms-c2L" secondAttribute="bottom" id="GLx-4X-scP"/>
+                                                    <constraint firstItem="wSZ-K4-ZGM" firstAttribute="leading" secondItem="SUj-3a-wtq" secondAttribute="leading" constant="5" id="HTa-rr-vdV"/>
+                                                    <constraint firstItem="wSZ-K4-ZGM" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="top" id="Ygq-uc-las"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wSZ-K4-ZGM" secondAttribute="bottom" id="fCk-cr-TB6"/>
+                                                    <constraint firstItem="wSZ-K4-ZGM" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="top" id="jsB-EB-bEm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5dC-ms-c2L" secondAttribute="trailing" constant="5" id="pTZ-fB-aIM"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="Fn4-jH-AGi" firstAttribute="leading" secondItem="sEV-Mg-HZL" secondAttribute="leading" constant="10" id="6IE-3U-MTA"/>
-                                            <constraint firstAttribute="trailing" secondItem="l8h-wd-6wP" secondAttribute="trailing" constant="10" id="960-vf-9vj"/>
-                                            <constraint firstItem="Fn4-jH-AGi" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="top" constant="10" id="Hmg-ai-jSn"/>
-                                            <constraint firstAttribute="bottom" secondItem="l8h-wd-6wP" secondAttribute="bottom" constant="10" id="IcP-Xi-AYZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="Fn4-jH-AGi" secondAttribute="bottom" constant="10" id="eHg-2F-u7D"/>
-                                            <constraint firstItem="l8h-wd-6wP" firstAttribute="top" secondItem="sEV-Mg-HZL" secondAttribute="top" constant="10" id="o5T-CX-pcP"/>
-                                            <constraint firstItem="l8h-wd-6wP" firstAttribute="leading" secondItem="Fn4-jH-AGi" secondAttribute="trailing" constant="5" id="yif-Vx-cUa"/>
+                                            <constraint firstItem="SUj-3a-wtq" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="5is-m7-4XO"/>
+                                            <constraint firstAttribute="trailing" secondItem="fSA-fx-G83" secondAttribute="trailing" id="7Gs-n6-0uA"/>
+                                            <constraint firstAttribute="trailing" secondItem="SUj-3a-wtq" secondAttribute="trailing" id="9Yy-lv-QJn"/>
+                                            <constraint firstItem="sEV-Mg-HZL" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="ePK-Ya-F1Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="sEV-Mg-HZL" secondAttribute="trailing" id="l02-gc-0U4"/>
+                                            <constraint firstItem="fSA-fx-G83" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="nFq-59-BJI"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-3a-wtq" userLabel="ClockOut">
-                                        <rect key="frame" x="0.0" y="120" width="394" height="50"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="doM-t1-Dca" userLabel="BreakSetView">
+                                        <rect key="frame" x="0.0" y="206" width="414" height="170"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ClockOut:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-AV-TTL">
-                                                <rect key="frame" x="10" y="10" width="108.5" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-xe-ULs" userLabel="BreakTime Stemp">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-ms-c2L">
-                                                <rect key="frame" x="123.5" y="10" width="59.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-N9-TaH" userLabel="ClockInView">
+                                                <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSA-Z5-NuB">
+                                                        <rect key="frame" x="5" y="0.0" width="200" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="aC8-JN-waJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                        <state key="normal" title="ClockIn"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clockButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="glr-VW-6x9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ev-qa-ld3">
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="wSA-Z5-NuB" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="top" id="4z9-PI-PM1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Ev-qa-ld3" secondAttribute="bottom" id="AGz-zd-AnH"/>
+                                                    <constraint firstItem="wSA-Z5-NuB" firstAttribute="leading" secondItem="LK3-N9-TaH" secondAttribute="leading" constant="5" id="CHP-6E-uCS"/>
+                                                    <constraint firstItem="wSA-Z5-NuB" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="top" id="CWi-jf-edF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4Ev-qa-ld3" secondAttribute="trailing" constant="5" id="G4H-VJ-E6u"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wSA-Z5-NuB" secondAttribute="bottom" id="Lb5-Tm-AQj"/>
+                                                    <constraint firstItem="4Ev-qa-ld3" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="top" constant="10" id="Sf5-pS-wZK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nh-42-ol1" userLabel="ClockOutView">
+                                                <rect key="frame" x="0.0" y="120" width="414" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESN-Tp-dWD">
+                                                        <rect key="frame" x="5" y="0.0" width="200" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="JL3-Jc-ESJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                        <state key="normal" title="ClockOut"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clockButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="KFQ-S7-VM3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-iT-jeG">
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ESN-Tp-dWD" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="top" id="126-4O-OVO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eeP-iT-jeG" secondAttribute="bottom" id="8jU-1p-Dut"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ESN-Tp-dWD" secondAttribute="bottom" id="9sW-FZ-Nb9"/>
+                                                    <constraint firstItem="eeP-iT-jeG" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="top" constant="10" id="H6l-hb-wMY"/>
+                                                    <constraint firstItem="ESN-Tp-dWD" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="top" id="H7x-GJ-alu"/>
+                                                    <constraint firstItem="ESN-Tp-dWD" firstAttribute="leading" secondItem="7nh-42-ol1" secondAttribute="leading" constant="5" id="Lvy-KY-gsn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eeP-iT-jeG" secondAttribute="trailing" constant="5" id="e4A-TF-Zef"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="VUe-AV-TTL" secondAttribute="bottom" constant="10" id="6CW-Rw-4nU"/>
-                                            <constraint firstItem="VUe-AV-TTL" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="top" constant="10" id="6CW-z4-hNt"/>
-                                            <constraint firstItem="5dC-ms-c2L" firstAttribute="leading" secondItem="VUe-AV-TTL" secondAttribute="trailing" constant="5" id="BZ3-ZZ-8Wo"/>
-                                            <constraint firstAttribute="trailing" secondItem="5dC-ms-c2L" secondAttribute="trailing" constant="10" id="CJi-k7-yTn"/>
-                                            <constraint firstItem="VUe-AV-TTL" firstAttribute="leading" secondItem="SUj-3a-wtq" secondAttribute="leading" constant="10" id="eua-te-kfz"/>
-                                            <constraint firstAttribute="bottom" secondItem="5dC-ms-c2L" secondAttribute="bottom" constant="10" id="kUy-iJ-cPg"/>
-                                            <constraint firstItem="5dC-ms-c2L" firstAttribute="top" secondItem="SUj-3a-wtq" secondAttribute="top" constant="10" id="l1m-Qs-WE6"/>
+                                            <constraint firstItem="LK3-N9-TaH" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="1RK-GN-Sga"/>
+                                            <constraint firstAttribute="trailing" secondItem="7nh-42-ol1" secondAttribute="trailing" id="4lN-DL-vCt"/>
+                                            <constraint firstItem="7nh-42-ol1" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="963-Dh-Fdh"/>
+                                            <constraint firstAttribute="trailing" secondItem="LK3-N9-TaH" secondAttribute="trailing" id="N6w-0c-HFz"/>
+                                            <constraint firstItem="9cB-xe-ULs" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="w0z-xd-lXH"/>
+                                            <constraint firstAttribute="trailing" secondItem="9cB-xe-ULs" secondAttribute="trailing" id="ywP-zw-rWF"/>
                                         </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pA-TZ-5U4">
-                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="ClockIn_ClockOut">
-                                            <color key="titleColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="titleShadowColor" red="0.90588235289999997" green="0.87450980389999999" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clockWorkingDayButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="fQV-KJ-B2K"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="6N8-d1-9Rv"/>
-                                    <constraint firstItem="sEV-Mg-HZL" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="FTk-Er-9Tb"/>
-                                    <constraint firstAttribute="trailing" secondItem="sEV-Mg-HZL" secondAttribute="trailing" id="J8V-tv-vug"/>
-                                    <constraint firstItem="SUj-3a-wtq" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="L6P-7B-7O2"/>
-                                    <constraint firstItem="fSA-fx-G83" firstAttribute="top" secondItem="AU5-sR-T0T" secondAttribute="top" id="NKY-pJ-q7a"/>
-                                    <constraint firstItem="5pA-TZ-5U4" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="OzU-wS-Ibn"/>
-                                    <constraint firstAttribute="trailing" secondItem="SUj-3a-wtq" secondAttribute="trailing" id="TY9-Nz-d9i"/>
-                                    <constraint firstAttribute="trailing" secondItem="5pA-TZ-5U4" secondAttribute="trailing" id="XQJ-ZS-kaa"/>
-                                    <constraint firstAttribute="trailing" secondItem="5pA-TZ-5U4" secondAttribute="trailing" constant="10" id="awm-Tg-ybG"/>
-                                    <constraint firstAttribute="trailing" secondItem="fSA-fx-G83" secondAttribute="trailing" id="gYR-NY-jhq"/>
-                                    <constraint firstItem="fSA-fx-G83" firstAttribute="leading" secondItem="AU5-sR-T0T" secondAttribute="leading" id="hcA-4W-ZaI"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="doM-t1-Dca" userLabel="BreakSetView">
-                                <rect key="frame" x="10" y="348" width="394" height="230"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-xe-ULs" userLabel="BreakTime Stemp">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-N9-TaH" userLabel="ClockInView">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ClockIn: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAX-Su-vbR">
-                                                <rect key="frame" x="10" y="10" width="94" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ev-qa-ld3">
-                                                <rect key="frame" x="109" y="10" width="59.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="4Ev-qa-ld3" secondAttribute="trailing" constant="10" id="4bc-LY-N6s"/>
-                                            <constraint firstItem="4Ev-qa-ld3" firstAttribute="leading" secondItem="SAX-Su-vbR" secondAttribute="trailing" constant="5" id="6fJ-JG-VnX"/>
-                                            <constraint firstItem="SAX-Su-vbR" firstAttribute="leading" secondItem="LK3-N9-TaH" secondAttribute="leading" constant="10" id="BKr-nC-v2i"/>
-                                            <constraint firstItem="4Ev-qa-ld3" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="top" constant="10" id="BpM-yg-8nB"/>
-                                            <constraint firstItem="SAX-Su-vbR" firstAttribute="top" secondItem="LK3-N9-TaH" secondAttribute="top" constant="10" id="Qnt-w6-X20"/>
-                                            <constraint firstAttribute="bottom" secondItem="4Ev-qa-ld3" secondAttribute="bottom" constant="10" id="Vkh-aR-aej"/>
-                                            <constraint firstAttribute="bottom" secondItem="SAX-Su-vbR" secondAttribute="bottom" constant="10" id="ZjQ-LL-ysl"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nh-42-ol1" userLabel="ClockOutView">
-                                        <rect key="frame" x="0.0" y="120" width="394" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ClockOut:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMo-5M-X0J">
-                                                <rect key="frame" x="10" y="10" width="108.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-iT-jeG">
-                                                <rect key="frame" x="123.5" y="10" width="59.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="MMo-5M-X0J" firstAttribute="leading" secondItem="7nh-42-ol1" secondAttribute="leading" constant="10" id="2M1-Mq-0Al"/>
-                                            <constraint firstItem="MMo-5M-X0J" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="top" constant="10" id="4M6-h5-yGI"/>
-                                            <constraint firstItem="eeP-iT-jeG" firstAttribute="top" secondItem="7nh-42-ol1" secondAttribute="top" constant="10" id="I1u-8K-V07"/>
-                                            <constraint firstAttribute="trailing" secondItem="eeP-iT-jeG" secondAttribute="trailing" constant="10" id="KO5-b7-KMo"/>
-                                            <constraint firstAttribute="bottom" secondItem="MMo-5M-X0J" secondAttribute="bottom" constant="10" id="X13-cz-6xu"/>
-                                            <constraint firstAttribute="bottom" secondItem="eeP-iT-jeG" secondAttribute="bottom" constant="10" id="l06-CQ-9JU"/>
-                                            <constraint firstItem="eeP-iT-jeG" firstAttribute="leading" secondItem="MMo-5M-X0J" secondAttribute="trailing" constant="5" id="wyS-bd-eea"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-R8-qmT">
-                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="ClockIn_ClockOut"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clockBreakButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="Drp-07-fVt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LK3-N9-TaH" secondAttribute="trailing" id="JKs-vT-yD0"/>
-                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="N1r-KY-vsx"/>
-                                    <constraint firstItem="MJ2-R8-qmT" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="X76-ev-vwQ"/>
-                                    <constraint firstItem="LK3-N9-TaH" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="aKz-13-Lid"/>
-                                    <constraint firstItem="7nh-42-ol1" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="cKO-0O-0sY"/>
-                                    <constraint firstAttribute="trailing" secondItem="MJ2-R8-qmT" secondAttribute="trailing" id="cQz-Yi-3kh"/>
-                                    <constraint firstItem="9cB-xe-ULs" firstAttribute="leading" secondItem="doM-t1-Dca" secondAttribute="leading" id="dtq-Oo-1PT"/>
-                                    <constraint firstAttribute="trailing" secondItem="9cB-xe-ULs" secondAttribute="trailing" id="j7A-eC-V6Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="MJ2-R8-qmT" secondAttribute="trailing" constant="10" id="odh-7G-KTi"/>
-                                    <constraint firstAttribute="trailing" secondItem="7nh-42-ol1" secondAttribute="trailing" id="qWd-NX-dwn"/>
-                                    <constraint firstItem="9cB-xe-ULs" firstAttribute="top" secondItem="doM-t1-Dca" secondAttribute="top" id="uMc-C2-w9c"/>
+                                    <constraint firstAttribute="trailing" secondItem="doM-t1-Dca" secondAttribute="trailing" id="Pxh-0g-P46"/>
+                                    <constraint firstItem="doM-t1-Dca" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" id="W6k-Km-etW"/>
+                                    <constraint firstItem="AU5-sR-T0T" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" id="ZQQ-cS-dam"/>
+                                    <constraint firstAttribute="trailing" secondItem="AU5-sR-T0T" secondAttribute="trailing" id="gLT-7x-PKz"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Retro"/>
                         <constraints>
-                            <constraint firstItem="AU5-sR-T0T" firstAttribute="leading" secondItem="ZyY-b9-HHJ" secondAttribute="leading" constant="10" id="CfX-kV-8bD"/>
-                            <constraint firstItem="ZyY-b9-HHJ" firstAttribute="trailing" secondItem="AU5-sR-T0T" secondAttribute="trailing" constant="10" id="NSs-P2-Cab"/>
-                            <constraint firstItem="ZyY-b9-HHJ" firstAttribute="trailing" secondItem="doM-t1-Dca" secondAttribute="trailing" constant="10" id="ci4-cN-fj4"/>
-                            <constraint firstItem="AU5-sR-T0T" firstAttribute="top" secondItem="ZyY-b9-HHJ" secondAttribute="top" constant="10" id="o5y-f9-rpz"/>
-                            <constraint firstItem="doM-t1-Dca" firstAttribute="leading" secondItem="ZyY-b9-HHJ" secondAttribute="leading" constant="10" id="puq-cQ-Xa0"/>
-                            <constraint firstItem="doM-t1-Dca" firstAttribute="top" secondItem="AU5-sR-T0T" secondAttribute="bottom" constant="20" id="wWf-lH-biq"/>
+                            <constraint firstItem="ZyY-b9-HHJ" firstAttribute="trailing" secondItem="dnb-UX-fNw" secondAttribute="trailing" id="JLV-a2-10Q"/>
+                            <constraint firstItem="dnb-UX-fNw" firstAttribute="leading" secondItem="WUm-um-MAU" secondAttribute="leading" id="aWB-Pe-T5i"/>
+                            <constraint firstItem="dnb-UX-fNw" firstAttribute="top" secondItem="ZyY-b9-HHJ" secondAttribute="top" id="tQF-bn-W7z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZyY-b9-HHJ"/>
                     </view>
@@ -506,12 +530,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="clockBreakButton" destination="MJ2-R8-qmT" id="SNg-FY-Hfd"/>
+                        <outlet property="clockInBreakButton" destination="wSA-Z5-NuB" id="1tb-fq-OLm"/>
                         <outlet property="clockInBreakLabel" destination="4Ev-qa-ld3" id="Kvf-Gr-szn"/>
                         <outlet property="clockInWorkginDayLabel" destination="l8h-wd-6wP" id="V2C-fu-Dh0"/>
+                        <outlet property="clockInWorkingDayButton" destination="5pA-TZ-5U4" id="gCj-m9-dGI"/>
+                        <outlet property="clockOutBreakButton" destination="ESN-Tp-dWD" id="28E-IQ-mMZ"/>
                         <outlet property="clockOutBreakLabel" destination="eeP-iT-jeG" id="MKw-gM-OD5"/>
+                        <outlet property="clockOutWorkginDayButton" destination="wSZ-K4-ZGM" id="Vew-5V-j5E"/>
                         <outlet property="clockOutWorkingDayLabel" destination="5dC-ms-c2L" id="j57-jk-vMX"/>
-                        <outlet property="clockWorkingDayButton" destination="5pA-TZ-5U4" id="ThC-PH-71c"/>
+                        <outlet property="dayLabel" destination="DTB-cB-Byq" id="Kv1-Yg-qJM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocA-hB-qRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

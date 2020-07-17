@@ -16,6 +16,6 @@ struct Stamping{
 enum StampingSubject: String {
     case ClockIn
     case ClockOut
-    case LunchBreakClockOut
-    case LunchBreakClockIn
+    case BreakClockOut
+    case BreakClockIn
 }
