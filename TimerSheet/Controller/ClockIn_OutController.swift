@@ -22,11 +22,13 @@ class ClockIn_OutController: UIViewController{
     @IBOutlet weak var clockOutBreakButton: UIButton!
     @IBOutlet weak var clockInBreakLabel: UILabel!
     @IBOutlet weak var clockOutBreakLabel: UILabel!
+    @IBOutlet weak var breakTimeLabel: UITextField!
+    @IBOutlet weak var previsionLabel: UILabel!
     
     var workingDayManager = WorkingDayManager()
     
     let db = Firestore.firestore()
-    var workingDay =  WorkingDayModel()
+    var workingDay =  WorkingDayModel(breakMinutesSimulation: 30)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,12 @@ class ClockIn_OutController: UIViewController{
         clockOutBreakButton.setTitle("\(StampingSubject.BreakClockOut)", for: .normal)
         dayLabel.text = Date().formatToday()
         workingDayManager.retiveDailyTimeStamps()
+  
+        previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
+    }
+    @IBAction func breakTimerStepperPressed(_ sender: UIStepper) {
+        workingDay.breakMinutesSimulation = Int(sender.value)
+         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
     }
 }
 
@@ -70,6 +78,8 @@ extension ClockIn_OutController {
         clockOutBreakButton.isEnabled = !workingDay.hasClockedOutBreak()
         clockInBreakLabel.text = workingDay.clockInBreakFormatted()
         clockOutBreakLabel.text = workingDay.clockOutBreakFormatted()
+        breakTimeLabel.text = "\(workingDay.breakMinutesSimulation)"
+        previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
     }
 }
 //Mark: - queryToFireBase

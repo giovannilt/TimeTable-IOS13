@@ -20,6 +20,19 @@ struct WorkingDayManager{
     let db = Firestore.firestore()
     var delegate: WorkingDayManagerDelegate?
     
+    func previsionEndOfDay(workingDay: WorkingDayModel) -> String{
+        if let stampingWorkingDayIN = workingDay.stampingWorkingDayIN {
+            let endOfDay = stampingWorkingDayIN.timeStamp.addingTimeInterval(8.0 * 60.0 * 60.0)
+            if let stampingBreakIN = workingDay.stampingBreakIN, let stampingBreakOUT = workingDay.stampingBreakOUT {
+                return endOfDay.addingTimeInterval(stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)).formatHour()
+            }
+            if let breakMinutesSimulation = workingDay.breakMinutesSimulation {
+                return endOfDay.addingTimeInterval(Double(breakMinutesSimulation * 60)).formatHour()
+            }
+        }
+        return ""
+    }
+    
     func saveTimeStamp(_ timeStamp: Stamping){
         if let userUID = Auth.auth().currentUser?.uid{
             db.collection(K.FSStore.TimeStampCollectionName).addDocument(data: [

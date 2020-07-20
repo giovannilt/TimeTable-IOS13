@@ -14,6 +14,8 @@ struct WorkingDayModel{
     var stampingBreakIN: Stamping?
     var stampingBreakOUT: Stamping?
     
+    var breakMinutesSimulation: Int
+    
     mutating func setStamping(_ timeStamp: Stamping){
         switch timeStamp.subject{
             case StampingSubject.ClockIn:
@@ -26,7 +28,6 @@ struct WorkingDayModel{
                 stampingBreakOUT = timeStamp
         }
     }
-    
     func hasClockedInWorkingDay() -> Bool{
         if  stampingWorkingDayIN != nil{
             return true
