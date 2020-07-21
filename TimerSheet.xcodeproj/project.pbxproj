@@ -24,6 +24,9 @@
 		DE734A7124BD9D7C004F3205 /* Stamping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7024BD9D7C004F3205 /* Stamping.swift */; };
 		DE734A7324BF146D004F3205 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7224BF146D004F3205 /* Utils.swift */; };
 		DE734A7524BF271F004F3205 /* WorkingDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE734A7424BF271F004F3205 /* WorkingDayModel.swift */; };
+		DE9205F024C763D80029B944 /* ReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9205EF24C763D80029B944 /* ReportController.swift */; };
+		DE9205F524C76A3B0029B944 /* WorkingDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9205F324C76A3B0029B944 /* WorkingDayCell.swift */; };
+		DE9205F624C76A3B0029B944 /* WorkingDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9205F424C76A3B0029B944 /* WorkingDayCell.xib */; };
 		DECBF82D24C18B66004DF8BF /* WorkingDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBF82C24C18B66004DF8BF /* WorkingDayManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		DE734A7024BD9D7C004F3205 /* Stamping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamping.swift; sourceTree = "<group>"; };
 		DE734A7224BF146D004F3205 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DE734A7424BF271F004F3205 /* WorkingDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayModel.swift; sourceTree = "<group>"; };
+		DE9205EF24C763D80029B944 /* ReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportController.swift; sourceTree = "<group>"; };
+		DE9205F324C76A3B0029B944 /* WorkingDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayCell.swift; sourceTree = "<group>"; };
+		DE9205F424C76A3B0029B944 /* WorkingDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkingDayCell.xib; sourceTree = "<group>"; };
 		DECBF82C24C18B66004DF8BF /* WorkingDayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDayManager.swift; sourceTree = "<group>"; };
 		FFFFCA88BFB6223C99C239D8 /* Pods-TimerSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimerSheet/Pods-TimerSheet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +174,8 @@
 			children = (
 				DE734A3E24BC9ECA004F3205 /* LaunchScreen.storyboard */,
 				DE734A3924BC9EC9004F3205 /* Main.storyboard */,
+				DE9205F324C76A3B0029B944 /* WorkingDayCell.swift */,
+				DE9205F424C76A3B0029B944 /* WorkingDayCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				DE734A6824BCB968004F3205 /* RegisterViewController.swift */,
 				DE734A6A24BCBE47004F3205 /* LoginViewController.swift */,
 				DE734A6C24BCC2D9004F3205 /* ClockIn_OutController.swift */,
+				DE9205EF24C763D80029B944 /* ReportController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 				DE734A6F24BD8D05004F3205 /* GoogleService-Info.plist in Resources */,
 				DE734A3D24BC9ECA004F3205 /* Assets.xcassets in Resources */,
 				DE734A3B24BC9EC9004F3205 /* Main.storyboard in Resources */,
+				DE9205F624C76A3B0029B944 /* WorkingDayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,9 +394,11 @@
 				DE734A6B24BCBE47004F3205 /* LoginViewController.swift in Sources */,
 				DE734A3824BC9EC9004F3205 /* WellcomeViewController.swift in Sources */,
 				DE734A7324BF146D004F3205 /* Utils.swift in Sources */,
+				DE9205F024C763D80029B944 /* ReportController.swift in Sources */,
 				DE734A7124BD9D7C004F3205 /* Stamping.swift in Sources */,
 				DE734A6924BCB968004F3205 /* RegisterViewController.swift in Sources */,
 				DE734A3424BC9EC9004F3205 /* AppDelegate.swift in Sources */,
+				DE9205F524C76A3B0029B944 /* WorkingDayCell.swift in Sources */,
 				DE734A3624BC9EC9004F3205 /* SceneDelegate.swift in Sources */,
 				DE734A6D24BCC2D9004F3205 /* ClockIn_OutController.swift in Sources */,
 				DE734A6724BCA927004F3205 /* Contants.swift in Sources */,

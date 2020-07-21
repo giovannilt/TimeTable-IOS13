@@ -53,8 +53,20 @@ struct WorkingDayManager{
             }
         }
     }
-    
-    
+    func workedHours(workingDay: WorkingDayModel) -> String{
+        if let stampingBreakIN = workingDay.stampingBreakIN,
+            let stampingBreakOUT = workingDay.stampingBreakOUT,
+            let stampingWorkingDayIN = workingDay.stampingWorkingDayIN,
+            let stampingWorkingDayOUT = workingDay.stampingWorkingDayOUT{
+            let worikingHour =  stampingWorkingDayOUT.timeStamp.timeIntervalSince(stampingWorkingDayIN.timeStamp )
+            let breakTime = stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)
+            let timeInterval = TimeInterval(worikingHour - breakTime)
+            let value = timeInterval.format(using: [.hour, .minute, .second])!
+            return "Wokring time: \(value)"
+            
+        }
+        return ""
+    }
     func idealDay(workingDay: WorkingDayModel){
         if let userUID = Auth.auth().currentUser?.uid{
             var date = Date().startOfDay + (7 * 60.0 * 60.0) // 07:00 del mattino

@@ -9,6 +9,17 @@
 import Foundation
 import UIKit
 
+extension TimeInterval {
+    func format(using units: NSCalendar.Unit) -> String? {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = units
+        formatter.unitsStyle = .abbreviated
+        formatter.zeroFormattingBehavior = .pad
+
+        return formatter.string(from: self)
+    }
+}
+
 extension Date {
     var startOfDay: Date {
         return Calendar.current.startOfDay(for: self)
@@ -76,6 +87,8 @@ extension Date {
             return UIColor(cgColor: color)
         }
     }
+    
+    
 }
 
 

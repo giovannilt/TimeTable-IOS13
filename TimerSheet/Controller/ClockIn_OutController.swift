@@ -24,7 +24,10 @@ class ClockIn_OutController: UIViewController{
     @IBOutlet weak var clockOutBreakLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UITextField!
     @IBOutlet weak var previsionLabel: UILabel!
+    
     @IBOutlet weak var breakStepper: UIStepper!
+    
+    @IBOutlet weak var workedHours: UILabel!
     
     var workingDayManager = WorkingDayManager()
     
@@ -91,6 +94,7 @@ extension ClockIn_OutController {
             breakStepper.isEnabled = true
         }
         breakStepper.value = Double(workingDay.breakMinutesSimulation)
+        workedHours.text =  workingDayManager.workedHours(workingDay: workingDay)
     }
     @IBAction func cleanButtonPressed(_ sender: UIButton) {
         workingDayManager.cleanCurrentDay(workingDay: workingDay)
