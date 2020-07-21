@@ -281,16 +281,46 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dnb-UX-fNw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-cB-Byq">
-                                        <rect key="frame" x="177.5" y="0.0" width="59.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-sR-T0T" userLabel="WorkSetView">
-                                        <rect key="frame" x="0.0" y="40" width="414" height="170"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jab-Fm-P0Q">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-fx-G83">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-cB-Byq">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-ti-RBf" userLabel="IdealDay">
+                                                <rect key="frame" x="304" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="eed-Ku-IhW"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fmv-Y0-cqH"/>
+                                                </constraints>
+                                                <state key="normal" image="wand.and.rays" catalog="system"/>
+                                                <connections>
+                                                    <action selector="IdealDay:" destination="wee-iD-BVR" eventType="touchUpInside" id="U3t-l3-Zf7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t72-0z-Grv" userLabel="DeleteDay">
+                                                <rect key="frame" x="354" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Ru5-e5-o9r"/>
+                                                    <constraint firstAttribute="height" constant="40" id="vFa-rb-eR6"/>
+                                                </constraints>
+                                                <state key="normal" image="clear" catalog="system"/>
+                                                <connections>
+                                                    <action selector="cleanButtonPressed:" destination="wee-iD-BVR" eventType="touchUpInside" id="ggI-sC-fOY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="t72-0z-Grv" firstAttribute="leading" secondItem="xEm-ti-RBf" secondAttribute="trailing" constant="10" id="81s-GQ-Lkb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AU5-sR-T0T" userLabel="WorkSetView">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="170"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-fx-G83" userLabel="Daily Time">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -386,19 +416,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="doM-t1-Dca" userLabel="BreakSetView">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="170"/>
+                                        <rect key="frame" x="0.0" y="230" width="414" height="160"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time Stemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-xe-ULs" userLabel="BreakTime Stemp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cB-xe-ULs" userLabel="BreakTime">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-N9-TaH" userLabel="ClockInView">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="56.5" width="414" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSA-Z5-NuB">
-                                                        <rect key="frame" x="5" y="0.0" width="200" height="50"/>
+                                                        <rect key="frame" x="5" y="0.0" width="200" height="47"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="aC8-JN-waJ"/>
@@ -418,7 +448,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ev-qa-ld3">
-                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="40"/>
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="37"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -435,10 +465,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nh-42-ol1" userLabel="ClockOutView">
-                                                <rect key="frame" x="0.0" y="120" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="113.5" width="414" height="46.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESN-Tp-dWD">
-                                                        <rect key="frame" x="5" y="0.0" width="200" height="50"/>
+                                                        <rect key="frame" x="5" y="0.0" width="200" height="46.5"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="JL3-Jc-ESJ"/>
@@ -458,7 +488,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-iT-jeG">
-                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="40"/>
+                                                        <rect key="frame" x="397.5" y="10" width="11.5" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -508,8 +538,8 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-Dn-nX4">
-                                                <rect key="frame" x="10" y="56" width="394" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <rect key="frame" x="10" y="56" width="394" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -529,8 +559,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="jab-Fm-P0Q" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" constant="10" id="46h-Ot-5wc"/>
                                     <constraint firstItem="WJ4-pU-sJH" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" id="HJP-L9-RPg"/>
                                     <constraint firstAttribute="trailing" secondItem="doM-t1-Dca" secondAttribute="trailing" id="Pxh-0g-P46"/>
+                                    <constraint firstAttribute="trailing" secondItem="jab-Fm-P0Q" secondAttribute="trailing" constant="10" id="SFi-e9-mrP"/>
                                     <constraint firstItem="doM-t1-Dca" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" id="W6k-Km-etW"/>
                                     <constraint firstItem="AU5-sR-T0T" firstAttribute="leading" secondItem="dnb-UX-fNw" secondAttribute="leading" id="ZQQ-cS-dam"/>
                                     <constraint firstAttribute="trailing" secondItem="AU5-sR-T0T" secondAttribute="trailing" id="gLT-7x-PKz"/>
@@ -570,6 +602,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="breakStepper" destination="oor-Uy-usy" id="d6M-ew-LNG"/>
                         <outlet property="breakTimeLabel" destination="Nzq-EC-3fY" id="kcV-ss-x4A"/>
                         <outlet property="clockInBreakButton" destination="wSA-Z5-NuB" id="1tb-fq-OLm"/>
                         <outlet property="clockInBreakLabel" destination="4Ev-qa-ld3" id="Kvf-Gr-szn"/>
@@ -650,8 +683,10 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WellcomIcon" width="768" height="768"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="textfield" width="298" height="93"/>
         <image name="tray.full" catalog="system" width="128" height="88"/>
+        <image name="wand.and.rays" catalog="system" width="128" height="121"/>
         <namedColor name="BrandBlue">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

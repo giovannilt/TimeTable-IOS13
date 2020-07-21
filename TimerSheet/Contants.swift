@@ -9,5 +9,6 @@ struct K{
         static let UserID = "UserID"
         static let TimeStamp = "TimeStamp"
         static let Subject = "Subject"
+        static let IsValid = "IsValid"
     }
 }

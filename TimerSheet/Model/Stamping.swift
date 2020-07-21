@@ -11,6 +11,7 @@ struct Stamping{
     var userID: String
     var timeStamp: Date
     var subject: StampingSubject
+    var isValid: Bool
 }
 
 enum StampingSubject: String {

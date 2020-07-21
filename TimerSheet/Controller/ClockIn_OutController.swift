@@ -24,6 +24,7 @@ class ClockIn_OutController: UIViewController{
     @IBOutlet weak var clockOutBreakLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UITextField!
     @IBOutlet weak var previsionLabel: UILabel!
+    @IBOutlet weak var breakStepper: UIStepper!
     
     var workingDayManager = WorkingDayManager()
     
@@ -40,13 +41,16 @@ class ClockIn_OutController: UIViewController{
         clockOutBreakButton.setTitle("\(StampingSubject.BreakClockOut)", for: .normal)
         dayLabel.text = Date().formatToday()
         workingDayManager.retiveDailyTimeStamps()
-  
+        
         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
     }
     @IBAction func breakTimerStepperPressed(_ sender: UIStepper) {
         workingDay.breakMinutesSimulation = Int(sender.value)
-         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
+        previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
+        breakTimeLabel.text = "\(workingDay.breakMinutesSimulation)"
     }
+    
+    
 }
 
 extension ClockIn_OutController {
@@ -62,9 +66,12 @@ extension ClockIn_OutController {
     @IBAction func clockButtonPressed(_ sender: UIButton) {
         if let userUID = Auth.auth().currentUser?.uid, let buttonTitle = sender.currentTitle{
             let subject = StampingSubject(rawValue: buttonTitle)
-            if let subjectD = subject{
-                let timeStamp = Stamping(userID: userUID, timeStamp: Date(), subject: subjectD)
+            if let subject = subject{
+                let timeStamp = Stamping(userID: userUID, timeStamp: Date(), subject: subject, isValid: true)
                 workingDayManager.saveTimeStamp(timeStamp)
+                if subject == StampingSubject.BreakClockOut{
+                    breakStepper.isEnabled = false
+                }
             }
         }
     }
@@ -80,11 +87,30 @@ extension ClockIn_OutController {
         clockOutBreakLabel.text = workingDay.clockOutBreakFormatted()
         breakTimeLabel.text = "\(workingDay.breakMinutesSimulation)"
         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
+        if workingDay.stampingBreakOUT == nil{
+            breakStepper.isEnabled = true
+        }
+        breakStepper.value = Double(workingDay.breakMinutesSimulation)
+    }
+    @IBAction func cleanButtonPressed(_ sender: UIButton) {
+        workingDayManager.cleanCurrentDay(workingDay: workingDay)
+    }
+    
+    @IBAction func IdealDay(_ sender: UIButton) {
+        workingDayManager.idealDay(workingDay: workingDay)
     }
 }
-//Mark: - queryToFireBase
 
+
+//Mark: - queryToFireBase
 extension ClockIn_OutController: WorkingDayManagerDelegate{
+    func diddDeleteDay(_ workingDayManager: WorkingDayManager, workingDay: WorkingDayModel) {
+        self.workingDay = workingDay
+        DispatchQueue.main.async {
+            self.updateClockInOutView(self.workingDay)
+        }
+    }
+    
     func didSaveStamp(_ workingDayManager: WorkingDayManager, timeStamp: Stamping ) {
         self.workingDay.setStamping(timeStamp)
         DispatchQueue.main.async {
