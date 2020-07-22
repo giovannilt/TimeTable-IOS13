@@ -55,6 +55,9 @@ extension Date {
     func formatToday() -> String{
         return self.getFormattedDate(format: "dd-MM-yyyy") // Set output formate
     }
+    func today() -> String{
+        return self.getFormattedDate(format: "yyyyMMdd") // Set output formate
+    }
     func weekOfYear() -> Int{
         return  NSCalendar.current.component(.weekOfYear, from: self)
     }

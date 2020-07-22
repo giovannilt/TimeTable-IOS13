@@ -21,7 +21,7 @@ struct ReportManager{
     
     func loadWorkingDays(date: Date){
         if let userUID = Auth.auth().currentUser?.uid{
-            let days30Ago = date - (30.0 * (24 * 60 * 60))
+            let days30Ago = date - (32.0 * (24 * 60 * 60))
             let collection = db.collection(K.FSStore.TimeStampCollectionName)
                 .whereField(K.FSStore.UserID, isEqualTo: userUID)
                 .whereField(K.FSStore.TimeStamp, isLessThan: date.endOfDay)
@@ -41,7 +41,7 @@ struct ReportManager{
                                 weeks[timeStamp.weekOfYear()] = "\(timeStamp.weekOfYear())"
                                 if let stampingSubject = StampingSubject(rawValue: (dataSubject as! String)){
                                     var workingDay: WorkingDayModel = WorkingDayModel(breakMinutesSimulation: 30)
-                                    if let wd = workingDays[timeStamp.formatToday()]{
+                                    if let wd = workingDays[timeStamp.today()]{
                                         workingDay = wd
 //                                      workingDays.updateValue(workingDay, forKey: timeStamp.formatToday())
                                     }
@@ -56,12 +56,12 @@ struct ReportManager{
                                         workingDay.stampingBreakOUT = Stamping(userID: "", timeStamp: timeStamp, subject: StampingSubject.BreakClockOut, isValid: true)
                                     }
                                     
-                                    workingDays[ timeStamp.formatToday()] = workingDay
+                                    workingDays[ timeStamp.today()] = workingDay
                                 
                                 }
                             }
                         }
-                        let sorted = weeks.sorted( by:{$0.key < $1.key})
+                        let sorted = weeks.sorted( by:{$0.key > $1.key})
                         self.delegate?.didLoadWorkingDays(self, workingDays: workingDays, weeks:Array(sorted.map({$0.value})))
                     }
                 }

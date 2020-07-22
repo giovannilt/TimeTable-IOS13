@@ -80,16 +80,16 @@ struct WorkingDayModel{
     
     func workedTimeInterval() -> TimeInterval {
         if let stampingBreakIN = stampingBreakIN,
-                   let stampingBreakOUT = stampingBreakOUT,
-                   let stampingWorkingDayIN = stampingWorkingDayIN,
-                   let stampingWorkingDayOUT = stampingWorkingDayOUT{
-                   
-                   let worikingHour =  stampingWorkingDayOUT.timeStamp.timeIntervalSince(stampingWorkingDayIN.timeStamp )
-                   let breakTime = stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)
-                   let timeInterval = TimeInterval(worikingHour - breakTime)
-                   print ("Time Interval: \(timeInterval)")
-                    return timeInterval
-               }
+            let stampingBreakOUT = stampingBreakOUT,
+            let stampingWorkingDayIN = stampingWorkingDayIN,
+            let stampingWorkingDayOUT = stampingWorkingDayOUT{
+            
+            let worikingHour =  stampingWorkingDayOUT.timeStamp.timeIntervalSince(stampingWorkingDayIN.timeStamp )
+            let breakTime = stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)
+            let timeInterval = TimeInterval(worikingHour - breakTime)
+            print ("Time Interval: \(timeInterval)")
+            return timeInterval
+        }
         return TimeInterval()
     }
     
@@ -102,7 +102,7 @@ struct WorkingDayModel{
     }
     
     func additionalWorkFormatted() -> String{
-        let intValue = Int(workedTimeInterval() - 28800.0)
+        let intValue = Int((workedTimeInterval() - 28800.0) / 60.0)
         return "\(intValue)"
     }
 }

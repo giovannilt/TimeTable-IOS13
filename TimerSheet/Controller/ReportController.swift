@@ -50,10 +50,13 @@ extension ReportController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let workingDayModel = workingDays[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! WorkingDayCell
-        cell.dailyResumeLabel.text = workingDayModel.workingDayFormatted()
-        cell.dailyAdditionalWork.text = workingDayModel.additionalWorkFormatted()
+        
+        if( workingDays.count >  indexPath.row){
+            let workingDayModel = workingDays[indexPath.row]
+            cell.dailyResumeLabel.text = workingDayModel.workingDayFormatted()
+            cell.dailyAdditionalWork.text = workingDayModel.additionalWorkFormatted()
+        }
         return cell
     }
 }
