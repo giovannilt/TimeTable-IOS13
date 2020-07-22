@@ -1,6 +1,0 @@
-framework module Pods_TimerSheet {
-  umbrella header "Pods-TimerSheet-umbrella.h"
-
-  export *
-  module * { export * }
-}

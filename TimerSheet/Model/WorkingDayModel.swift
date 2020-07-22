@@ -18,14 +18,14 @@ struct WorkingDayModel{
     
     mutating func setStamping(_ timeStamp: Stamping){
         switch timeStamp.subject{
-            case StampingSubject.ClockIn:
-                stampingWorkingDayIN = timeStamp
-            case StampingSubject.ClockOut:
-                stampingWorkingDayOUT = timeStamp
-            case StampingSubject.BreakClockIn:
-                stampingBreakIN = timeStamp
-            case StampingSubject.BreakClockOut:
-                stampingBreakOUT = timeStamp
+        case StampingSubject.ClockIn:
+            stampingWorkingDayIN = timeStamp
+        case StampingSubject.ClockOut:
+            stampingWorkingDayOUT = timeStamp
+        case StampingSubject.BreakClockIn:
+            stampingBreakIN = timeStamp
+        case StampingSubject.BreakClockOut:
+            stampingBreakOUT = timeStamp
         }
     }
     func hasClockedInWorkingDay() -> Bool{
@@ -76,6 +76,34 @@ struct WorkingDayModel{
             return stampingBOUT.timeStamp.formatHour()
         }
         return "-"
+    }
+    
+    func workedTimeInterval() -> TimeInterval {
+        if let stampingBreakIN = stampingBreakIN,
+                   let stampingBreakOUT = stampingBreakOUT,
+                   let stampingWorkingDayIN = stampingWorkingDayIN,
+                   let stampingWorkingDayOUT = stampingWorkingDayOUT{
+                   
+                   let worikingHour =  stampingWorkingDayOUT.timeStamp.timeIntervalSince(stampingWorkingDayIN.timeStamp )
+                   let breakTime = stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)
+                   let timeInterval = TimeInterval(worikingHour - breakTime)
+                   print ("Time Interval: \(timeInterval)")
+                    return timeInterval
+               }
+        return TimeInterval()
+    }
+    
+    func workingDayFormatted() -> String{
+        let value = workedTimeInterval().format(using: [.hour, .minute, .second])!
+        if let stampingBreakIN = stampingBreakIN {
+            return stampingBreakIN.timeStamp.formatToday() + " " + value
+        }
+        return "-"
+    }
+    
+    func additionalWorkFormatted() -> String{
+        let intValue = Int(workedTimeInterval() - 28800.0)
+        return "\(intValue)"
     }
 }
 

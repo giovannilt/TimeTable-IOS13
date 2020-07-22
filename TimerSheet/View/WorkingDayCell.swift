@@ -11,12 +11,13 @@ import UIKit
 class WorkingDayCell: UITableViewCell {
 
     @IBOutlet weak var dailyResumeLabel: UILabel!
+    @IBOutlet weak var dailyAdditionalWork: UILabel!
     
     override func awakeFromNib() {
            super.awakeFromNib()
            
-           dailyResumeLabel.layer.cornerRadius = dailyResumeLabel.frame.size.height / 2
-           
+//           dailyResumeLabel.layer.cornerRadius = dailyResumeLabel.frame.size.height / 2
+//
        }
 
        override func setSelected(_ selected: Bool, animated: Bool) {

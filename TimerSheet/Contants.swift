@@ -4,6 +4,10 @@ struct K{
     static let loginSegue: String = "LoginToClokIn_Out"
     static let reportSegue: String  = "ClockIn_OutToReport"
     
+    static let cellIdentifier = "DayCell"
+    static let cellNibName = "WorkingDayCell"
+    
+    
     struct FSStore{
         static let TimeStampCollectionName = "TimeStamp"
         static let UserID = "UserID"

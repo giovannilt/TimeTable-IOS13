@@ -44,6 +44,7 @@ class ClockIn_OutController: UIViewController{
         clockOutBreakButton.setTitle("\(StampingSubject.BreakClockOut)", for: .normal)
         dayLabel.text = Date().formatToday()
         workingDayManager.retiveDailyTimeStamps()
+        workedHours.text = "-"
         
         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
     }
@@ -52,6 +53,7 @@ class ClockIn_OutController: UIViewController{
         previsionLabel.text = workingDayManager.previsionEndOfDay(workingDay: workingDay)
         breakTimeLabel.text = "\(workingDay.breakMinutesSimulation)"
     }
+    
     
     
 }
@@ -94,7 +96,7 @@ extension ClockIn_OutController {
             breakStepper.isEnabled = true
         }
         breakStepper.value = Double(workingDay.breakMinutesSimulation)
-        workedHours.text =  workingDayManager.workedHours(workingDay: workingDay)
+        workedHours.text = "Working time: \(workingDay.workingDayFormatted())"
     }
     @IBAction func cleanButtonPressed(_ sender: UIButton) {
         workingDayManager.cleanCurrentDay(workingDay: workingDay)
@@ -102,6 +104,10 @@ extension ClockIn_OutController {
     
     @IBAction func IdealDay(_ sender: UIButton) {
         workingDayManager.idealDay(workingDay: workingDay)
+    }
+    
+    @IBAction func add30DaysCasual(_ sender: UIButton) {
+        workingDayManager.generateOneMonts()
     }
 }
 

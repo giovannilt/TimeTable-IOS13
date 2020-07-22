@@ -53,20 +53,7 @@ struct WorkingDayManager{
             }
         }
     }
-    func workedHours(workingDay: WorkingDayModel) -> String{
-        if let stampingBreakIN = workingDay.stampingBreakIN,
-            let stampingBreakOUT = workingDay.stampingBreakOUT,
-            let stampingWorkingDayIN = workingDay.stampingWorkingDayIN,
-            let stampingWorkingDayOUT = workingDay.stampingWorkingDayOUT{
-            let worikingHour =  stampingWorkingDayOUT.timeStamp.timeIntervalSince(stampingWorkingDayIN.timeStamp )
-            let breakTime = stampingBreakOUT.timeStamp.timeIntervalSince(stampingBreakIN.timeStamp)
-            let timeInterval = TimeInterval(worikingHour - breakTime)
-            let value = timeInterval.format(using: [.hour, .minute, .second])!
-            return "Wokring time: \(value)"
-            
-        }
-        return ""
-    }
+   
     func idealDay(workingDay: WorkingDayModel){
         if let userUID = Auth.auth().currentUser?.uid{
             var date = Date().startOfDay + (7 * 60.0 * 60.0) // 07:00 del mattino
@@ -79,6 +66,32 @@ struct WorkingDayManager{
             saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.ClockOut, isValid: true))
         }
     }
+    
+    
+    func generateOneMonts(){
+        if let userUID = Auth.auth().currentUser?.uid{
+            var date = Date()
+            for i in 1...date.getDaysInMonth()  {
+                date =  date.startOfDay + (7 * 60.0 * 60.0)
+                saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.ClockIn, isValid: true))
+                
+                var randomMinutes = Double(Int.random(in: 0 ..< 10)) * 60.0
+                date = date + ((5 * 60.0 * 60.0) + randomMinutes ) // 12:00 ora di pranzo + un random di 0 ... 9 minuti
+                saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.BreakClockIn, isValid: true))
+                
+                randomMinutes =  Double(Int.random(in: 0 ..< 10)) * 60.0
+                date = date + (30.0 * 60.0) + randomMinutes
+                saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.BreakClockOut, isValid: true))
+                
+                randomMinutes =  Double(Int.random(in: 0 ..< 30)) * 60.0
+                date = date + (3 * 60.0 * 60.0) + randomMinutes
+                saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.ClockOut, isValid: true))
+                
+                date = date.startOfDay - (Double(i) * 60.0 * 60.0)
+            }
+        }
+    }
+    
     func previsionEndOfDay(workingDay: WorkingDayModel) -> String{
         if let stampingWorkingDayIN = workingDay.stampingWorkingDayIN {
             let endOfDay = stampingWorkingDayIN.timeStamp.addingTimeInterval(8.0 * 60.0 * 60.0)
