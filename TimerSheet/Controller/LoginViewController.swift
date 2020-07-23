@@ -14,6 +14,7 @@ import GoogleSignIn
 class LoginViewController: UIViewController, GIDSignInDelegate{
     
     @IBOutlet weak var signInButton: GIDSignInButton!
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate{
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
         //GIDSignIn.sharedInstance().signIn()
+        if userDefault.bool(forKey: "usersignedin") {
+             self.performSegue(withIdentifier: K.loginSegue, sender: self)
+        }
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -45,6 +50,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate{
                 self.present(alert, animated: true, completion: nil)
             } else {
                 // Navigate to ChatViewController
+                self.userDefault.set(true, forKey: "usersignedin")
+                self.userDefault.synchronize()
                 self.performSegue(withIdentifier: K.loginSegue, sender: self)
             }
             return
@@ -56,6 +63,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate{
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            self.userDefault.set(false, forKey: "usersignedin")
+            self.userDefault.synchronize()
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

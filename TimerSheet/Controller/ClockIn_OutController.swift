@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class ClockIn_OutController: UIViewController{
     
+    let userDefault = UserDefaults.standard
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var clockInWorkingDayButton: UIButton!
     @IBOutlet weak var clockOutWorkginDayButton: UIButton!
@@ -62,6 +63,8 @@ extension ClockIn_OutController {
     @IBAction func LogOutButtonPressed(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
+            self.userDefault.set(false, forKey: "usersignedin")
+            self.userDefault.synchronize()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
