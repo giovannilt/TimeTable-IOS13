@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import Firebase
 import FirebaseAuth
+import Firebase
+import GoogleSignIn
 
 class RegisterViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
      }
     
     @IBAction func registerPressed(_ sender: UIButton) {

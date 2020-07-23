@@ -10,6 +10,10 @@ target 'TimerSheet' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Google'
+  pod 'GoogleSignIn'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
   pod 'IQKeyboardManagerSwift'
 
 end
