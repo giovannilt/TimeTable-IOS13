@@ -83,7 +83,7 @@ struct WorkingDayManager{
                 date = date + (30.0 * 60.0) + randomMinutes
                 saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.BreakClockOut, isValid: true))
                 
-                randomMinutes =  Double(Int.random(in: 0 ..< 30)) * 60.0
+                randomMinutes =  Double(Int.random(in: 0 ..< 60)) * 60.0
                 date = date + (3 * 60.0 * 60.0) + randomMinutes
                 saveTimeStamp(Stamping(userID: userUID, timeStamp: date, subject: StampingSubject.ClockOut, isValid: true))
                 

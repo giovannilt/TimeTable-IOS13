@@ -10,8 +10,10 @@ import UIKit
 
 class WorkingDayCell: UITableViewCell {
 
-    @IBOutlet weak var dailyResumeLabel: UILabel!
-    @IBOutlet weak var dailyAdditionalWork: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var workedHoursLabel: UILabel!
+    @IBOutlet weak var dailyFlexy: UILabel!
+    @IBOutlet weak var dailyPayedAdditionalWork: UILabel!
     
     override func awakeFromNib() {
            super.awakeFromNib()

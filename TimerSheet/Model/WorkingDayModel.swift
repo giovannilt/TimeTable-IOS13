@@ -94,17 +94,34 @@ struct WorkingDayModel{
     }
     
     func workingDayFormatted() -> String{
-        let value = workedTimeInterval().format(using: [.hour, .minute, .second])!
         if let stampingBreakIN = stampingBreakIN {
-            return stampingBreakIN.timeStamp.formatToday() + " " + value
+            return stampingBreakIN.timeStamp.formatToday()
         }
         return "-"
     }
     
-    func additionalWorkFormatted() -> String{
-        let intValue = Int((workedTimeInterval() - 28800.0) / 60.0)
-        return "\(intValue)"
+    func workedHours() -> String{
+        return  workedTimeInterval().format(using: [.hour, .minute])!
     }
+    
+    func dailyPayedAdditionalWork() -> String{
+        let intValue = Int((workedTimeInterval() - 28800.0) / 60.0) - 30
+        if intValue > 0 {
+            return "\(intValue)"
+        }else {
+            return "0"
+        }
+    }
+    func dailyFlexy() -> String{
+        let intValue = Int((workedTimeInterval() - 28800.0) / 60.0)
+        if intValue > 30 {
+            return "30"
+        }else {
+            return "\(intValue)"
+        }
+    }
+    
+    
 }
 
 

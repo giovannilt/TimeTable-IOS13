@@ -54,8 +54,10 @@ extension ReportController: UITableViewDataSource{
         
         if( workingDays.count >  indexPath.row){
             let workingDayModel = workingDays[indexPath.row]
-            cell.dailyResumeLabel.text = workingDayModel.workingDayFormatted()
-            cell.dailyAdditionalWork.text = workingDayModel.additionalWorkFormatted()
+            cell.dateLabel.text = workingDayModel.workingDayFormatted()
+            cell.workedHoursLabel.text = workingDayModel.workedHours()
+            cell.dailyFlexy.text = workingDayModel.dailyFlexy()
+            cell.dailyPayedAdditionalWork.text = workingDayModel.dailyPayedAdditionalWork()
         }
         return cell
     }

@@ -16,16 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-w4-DVh">
-                        <rect key="frame" x="1" y="1" width="229" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3a-Pc-GjG">
+                        <rect key="frame" x="0.0" y="0.0" width="135" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAJ-sS-bm0">
-                        <rect key="frame" x="240" y="0.0" width="70" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-w4-DVh">
+                        <rect key="frame" x="135" y="0.0" width="60" height="44"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="kGQ-zD-A9t"/>
+                            <constraint firstAttribute="width" constant="120" id="eXl-5a-xyC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-Aw-tbo">
+                        <rect key="frame" x="195" y="0.0" width="60" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6gU-RL-pQG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAJ-sS-bm0">
+                        <rect key="frame" x="255" y="0.0" width="60" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="kGQ-zD-A9t"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90588235289999997" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -33,21 +51,29 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="eDU-w4-DVh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="3xk-yv-6Tf"/>
-                    <constraint firstItem="QAJ-sS-bm0" firstAttribute="leading" secondItem="eDU-w4-DVh" secondAttribute="trailing" constant="10" id="GNx-cB-F5H"/>
-                    <constraint firstItem="eDU-w4-DVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="Ow1-55-gWR"/>
-                    <constraint firstAttribute="trailing" secondItem="QAJ-sS-bm0" secondAttribute="trailing" constant="10" id="TMz-GZ-qdj"/>
-                    <constraint firstItem="QAJ-sS-bm0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="U1V-M1-azW"/>
-                    <constraint firstAttribute="bottom" secondItem="eDU-w4-DVh" secondAttribute="bottom" constant="1" id="XYB-ij-pXE"/>
-                    <constraint firstAttribute="bottom" secondItem="QAJ-sS-bm0" secondAttribute="bottom" id="qHu-g9-kgd"/>
+                    <constraint firstAttribute="bottom" secondItem="F3a-Pc-GjG" secondAttribute="bottom" id="63w-0P-NiF"/>
+                    <constraint firstItem="QAJ-sS-bm0" firstAttribute="leading" secondItem="tgN-Aw-tbo" secondAttribute="trailing" id="7Pu-TH-3zO"/>
+                    <constraint firstAttribute="trailing" secondItem="QAJ-sS-bm0" secondAttribute="trailing" constant="5" id="9Ai-8Z-cHo"/>
+                    <constraint firstItem="eDU-w4-DVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AWC-OM-4JO"/>
+                    <constraint firstItem="F3a-Pc-GjG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GtW-b7-T7F"/>
+                    <constraint firstItem="tgN-Aw-tbo" firstAttribute="leading" secondItem="eDU-w4-DVh" secondAttribute="trailing" id="I9k-nN-EbZ"/>
+                    <constraint firstAttribute="bottom" secondItem="eDU-w4-DVh" secondAttribute="bottom" id="Md3-i9-m9K"/>
+                    <constraint firstAttribute="bottom" secondItem="QAJ-sS-bm0" secondAttribute="bottom" id="Z6Y-KS-rf6"/>
+                    <constraint firstItem="F3a-Pc-GjG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dpx-R8-K7h"/>
+                    <constraint firstItem="eDU-w4-DVh" firstAttribute="leading" secondItem="F3a-Pc-GjG" secondAttribute="trailing" id="giH-5K-u8F"/>
+                    <constraint firstItem="tgN-Aw-tbo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iC1-eQ-n4E"/>
+                    <constraint firstAttribute="bottom" secondItem="tgN-Aw-tbo" secondAttribute="bottom" id="r8z-bb-yvt"/>
+                    <constraint firstItem="QAJ-sS-bm0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="y0f-6Q-Fc2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dailyAdditionalWork" destination="QAJ-sS-bm0" id="dD0-oh-Ff5"/>
-                <outlet property="dailyResumeLabel" destination="eDU-w4-DVh" id="C3X-7a-rVT"/>
+                <outlet property="dailyFlexy" destination="tgN-Aw-tbo" id="ZqJ-qY-gUK"/>
+                <outlet property="dailyPayedAdditionalWork" destination="QAJ-sS-bm0" id="dD0-oh-Ff5"/>
+                <outlet property="dateLabel" destination="F3a-Pc-GjG" id="krs-JS-wWD"/>
+                <outlet property="workedHoursLabel" destination="eDU-w4-DVh" id="C3X-7a-rVT"/>
             </connections>
-            <point key="canvasLocation" x="132" y="150"/>
+            <point key="canvasLocation" x="131.8840579710145" y="150"/>
         </tableViewCell>
     </objects>
 </document>
