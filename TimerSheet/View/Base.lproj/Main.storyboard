@@ -64,11 +64,12 @@
                     <navigationItem key="navigationItem" id="wBj-vq-vbk"/>
                     <connections>
                         <outlet property="titleLabel" destination="B2T-rP-wBd" id="18W-44-jIq"/>
+                        <segue destination="wee-iD-BVR" kind="show" identifier="LoginToClokIn_Out" id="Qiz-W9-oTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1177" y="138"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ojl-B0-qf5">
@@ -95,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWb-yx-nlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197.1014492753625" y="499.55357142857139"/>
+            <point key="canvasLocation" x="2184" y="-251"/>
         </scene>
         <!--Clock In Out Controller-->
         <scene sceneID="tBx-UO-smo">
@@ -529,6 +530,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qiz-W9-oTK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="WellcomIcon" width="768" height="768"/>
         <image name="clear" catalog="system" width="128" height="114"/>
